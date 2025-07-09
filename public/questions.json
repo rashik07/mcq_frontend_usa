@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "question": "What is the capital of France?",
+    "options": ["Paris", "Berlin", "Rome", "Madrid"],
+    "answer": "Paris"
+  },
+  {
+    "id": 2,
+    "question": "Which planet is known as the Red Planet?",
+    "options": ["Earth", "Mars", "Jupiter", "Venus"],
+    "answer": "Mars"
+  },
+  {
+    "id": 3,
+    "question": "What is the largest ocean on Earth?",
+    "options": ["Atlantic", "Pacific", "Indian", "Arctic"],
+    "answer": "Pacific"
+  },
+  {
+    "id": 4,
+    "question": "Who wrote 'Romeo and Juliet'?",
+    "options": ["William Wordsworth", "William Shakespeare", "John Milton", "Jane Austen"],
+    "answer": "William Shakespeare"
+  },
+  {
+    "id": 5,
+    "question": "Which gas is essential for us to breathe?",
+    "options": ["Carbon Dioxide", "Nitrogen", "Oxygen", "Hydrogen"],
+    "answer": "Oxygen"
+  },
+  {
+    "id": 6,
+    "question": "What is 10 x 10?",
+    "options": ["100", "1000", "10", "110"],
+    "answer": "100"
+  },
+  {
+    "id": 7,
+    "question": "What is the boiling point of water?",
+    "options": ["50°C", "90°C", "100°C", "120°C"],
+    "answer": "100°C"
+  },
+  {
+    "id": 8,
+    "question": "What is the currency of Japan?",
+    "options": ["Yuan", "Dollar", "Yen", "Won"],
+    "answer": "Yen"
+  },
+  {
+    "id": 9,
+    "question": "Which continent is Egypt in?",
+    "options": ["Asia", "Europe", "Africa", "Australia"],
+    "answer": "Africa"
+  },
+  {
+    "id": 10,
+    "question": "What is H2O commonly known as?",
+    "options": ["Salt", "Hydrogen", "Oxygen", "Water"],
+    "answer": "Water"
+  },
+  {
+    "id": 11,
+    "question": "What is the largest animal on Earth?",
+    "options": ["Elephant", "Blue Whale", "Shark", "Giraffe"],
+    "answer": "Blue Whale"
+  },
+  {
+    "id": 12,
+    "question": "What color do you get when you mix red and white?",
+    "options": ["Pink", "Orange", "Purple", "Brown"],
+    "answer": "Pink"
+  },
+  {
+    "id": 13,
+    "question": "Which organ pumps blood through the body?",
+    "options": ["Liver", "Heart", "Lungs", "Brain"],
+    "answer": "Heart"
+  },
+  {
+    "id": 14,
+    "question": "Which is the smallest prime number?",
+    "options": ["0", "1", "2", "3"],
+    "answer": "2"
+  },
+  {
+    "id": 15,
+    "question": "Which language is primarily spoken in Brazil?",
+    "options": ["Spanish", "Portuguese", "French", "English"],
+    "answer": "Portuguese"
+  },
+  {
+    "id": 16,
+    "question": "Which element has the chemical symbol 'O'?",
+    "options": ["Gold", "Oxygen", "Osmium", "Opal"],
+    "answer": "Oxygen"
+  },
+  {
+    "id": 17,
+    "question": "Which number comes next in the sequence: 2, 4, 6, 8, ...?",
+    "options": ["10", "9", "11", "12"],
+    "answer": "10"
+  },
+  {
+    "id": 18,
+    "question": "What is the tallest mountain in the world?",
+    "options": ["Mount Everest", "K2", "Kangchenjunga", "Makalu"],
+    "answer": "Mount Everest"
+  },
+  {
+    "id": 19,
+    "question": "Which country is known for pizza and pasta?",
+    "options": ["France", "India", "Italy", "China"],
+    "answer": "Italy"
+  },
+  {
+    "id": 20,
+    "question": "What shape is a stop sign?",
+    "options": ["Triangle", "Octagon", "Square", "Circle"],
+    "answer": "Octagon"
+  }
+]
