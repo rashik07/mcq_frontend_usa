@@ -66,7 +66,7 @@ const Certificate = ({ name = "John Doe", score = 95 }) => {
         <p className="text-lg text-gray-600">This certifies that</p>
         <h2 className="text-3xl font-bold text-blue-800 underline my-4">{name}</h2>
         <p className="text-lg text-gray-600">has successfully completed the MCQ Knowledge Test</p>
-        <p className="text-2xl font-bold text-green-700 mt-6">Score: {score}/100</p>
+        <p className="text-2xl font-bold text-green-700 mt-6">Score: {score}/20</p>
 
         <div className="mt-12 text-sm text-gray-500 flex justify-between">
           <p>Date: {new Date().toLocaleDateString()}</p>
