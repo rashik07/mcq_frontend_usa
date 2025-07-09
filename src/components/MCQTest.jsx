@@ -35,40 +35,28 @@ const MCQTest = () => {
     setSelectedAnswers(autoAnswers);
   };
 
-//   const downloadCertificate = () => {
-//     const element = document.createElement('a');
-//     const file = new Blob(
-//       [`🎓 Certificate of Completion 🎓\n\nScore: ${score}/100\n\nCongratulations!`],
-//       { type: 'text/plain' }
-//     );
-//     element.href = URL.createObjectURL(file);
-//     element.download = 'certificate.txt';
-//     document.body.appendChild(element);
-//     element.click();
-//   };
-
   return (
-    <div className="min-h-screen bg-gray-100 py-16 px-10">
-      <div className="max-w-6xl mx-auto bg-white shadow-2xl rounded-xl p-12">
-        <h1 className="text-5xl font-extrabold text-center text-blue-800 mb-12 tracking-wide">
+    <div className="min-h-screen bg-gray-100 py-10 px-4 sm:px-6">
+      <div className="max-w-4xl mx-auto bg-white shadow-xl rounded-xl p-6 sm:p-10">
+        <h1 className="text-3xl sm:text-5xl font-extrabold text-center text-blue-800 mb-8 sm:mb-12 tracking-wide">
           🧠 MCQ Knowledge Test
         </h1>
 
         {!submitted ? (
-          <form onSubmit={handleSubmit} className="space-y-12">
+          <form onSubmit={handleSubmit} className="space-y-10 sm:space-y-12">
             {questions.map((q, index) => (
               <div
                 key={q.id}
-                className="border border-gray-300 rounded-xl p-6 hover:shadow-md transition-all"
+                className="border border-gray-300 rounded-xl p-4 sm:p-6 hover:shadow-md transition-all"
               >
-                <p className="text-xl font-semibold mb-4">
+                <p className="text-lg sm:text-xl font-semibold mb-4">
                   {index + 1}. {q.question}
                 </p>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {q.options.map(opt => (
                     <label
                       key={opt}
-                      className={`flex items-center p-3 border rounded-lg cursor-pointer hover:bg-blue-50 transition ${
+                      className={`flex items-center p-3 border rounded-lg cursor-pointer hover:bg-blue-50 transition text-sm sm:text-base ${
                         selectedAnswers[q.id] === opt
                           ? 'border-blue-500 bg-blue-100 font-semibold'
                           : 'border-gray-200'
@@ -89,41 +77,32 @@ const MCQTest = () => {
               </div>
             ))}
 
-            <div className="text-center space-x-4">
+            <div className="text-center space-y-4 sm:space-x-4 sm:space-y-0 flex flex-col sm:flex-row justify-center">
               <button
                 type="button"
                 onClick={handleAutoAnswer}
-                className="bg-yellow-500 hover:bg-yellow-600 text-white text-lg font-bold px-8 py-3 rounded-full shadow-md transition"
+                className="bg-yellow-500 hover:bg-yellow-600 text-white text-base sm:text-lg font-bold px-6 py-3 rounded-full shadow-md transition"
               >
                 Auto Answer
               </button>
               <button
                 type="submit"
-                className="bg-blue-700 hover:bg-blue-800 text-white text-lg font-bold px-10 py-4 rounded-full shadow-lg transition"
+                className="bg-blue-700 hover:bg-blue-800 text-white text-base sm:text-lg font-bold px-8 py-3 rounded-full shadow-lg transition"
               >
                 Submit Answers
               </button>
             </div>
           </form>
         ) : (
-          <div className="space-y-12">
-            <div className="text-center mb-10">
-              <h2 className="text-4xl font-bold text-green-600">
+          <div className="space-y-10 sm:space-y-12">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl sm:text-4xl font-bold text-green-600">
                 Your Score: {score}/20
               </h2>
               {score >= 16 ? (
-                <>
-                  {/* <p className="text-xl text-gray-700 mt-2">🎉 Congratulations! You passed the test!</p>
-                  <button
-                    onClick={downloadCertificate}
-                    className="mt-4 bg-green-700 hover:bg-green-800 text-white text-lg font-bold px-8 py-3 rounded-full shadow-md transition"
-                  >
-                    Download Certificate
-                  </button> */}
-                  <Certificate name="John Doe" score={score} />
-                </>
+                <Certificate name="John Doe" score={score} />
               ) : (
-                <p className="text-xl text-red-500 font-semibold mt-4">
+                <p className="text-lg sm:text-xl text-red-500 font-semibold mt-4">
                   ❌ You didn’t qualify for a certificate. Try again!
                 </p>
               )}
@@ -136,14 +115,16 @@ const MCQTest = () => {
               return (
                 <div
                   key={q.id}
-                  className={`border-2 rounded-xl p-6 ${
-                    isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50'
+                  className={`border-2 rounded-xl p-4 sm:p-6 ${
+                    isCorrect
+                      ? 'border-green-500 bg-green-50'
+                      : 'border-red-500 bg-red-50'
                   }`}
                 >
-                  <p className="text-xl font-semibold mb-4">
+                  <p className="text-lg sm:text-xl font-semibold mb-3">
                     {index + 1}. {q.question}
                   </p>
-                  <div className="grid grid-cols-2 gap-4 mb-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-2">
                     {q.options.map(opt => {
                       const isUserAnswer = userAnswer === opt;
                       const isRightAnswer = q.answer === opt;
@@ -151,7 +132,7 @@ const MCQTest = () => {
                       return (
                         <div
                           key={opt}
-                          className={`p-3 rounded-lg border text-lg ${
+                          className={`p-3 rounded-lg border text-sm sm:text-base ${
                             isRightAnswer
                               ? 'border-green-600 bg-green-100 font-semibold'
                               : isUserAnswer
@@ -161,17 +142,21 @@ const MCQTest = () => {
                         >
                           {opt}
                           {isUserAnswer && !isRightAnswer && (
-                            <span className="ml-2 text-sm text-red-700 font-medium">✘ Your Answer</span>
+                            <span className="ml-2 text-xs sm:text-sm text-red-700 font-medium">
+                              ✘ Your Answer
+                            </span>
                           )}
                           {isUserAnswer && isRightAnswer && (
-                            <span className="ml-2 text-sm text-green-700 font-medium">✔ Correct</span>
+                            <span className="ml-2 text-xs sm:text-sm text-green-700 font-medium">
+                              ✔ Correct
+                            </span>
                           )}
                         </div>
                       );
                     })}
                   </div>
                   {!isCorrect && (
-                    <p className="text-sm text-gray-800 italic">
+                    <p className="text-xs sm:text-sm text-gray-800 italic">
                       ✅ Correct Answer: <span className="font-semibold">{q.answer}</span>
                     </p>
                   )}

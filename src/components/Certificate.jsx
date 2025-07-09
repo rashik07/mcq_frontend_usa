@@ -22,21 +22,23 @@ const Certificate = ({ name = "John Doe", score = 95 }) => {
               background-color: #f3f4f6;
             }
             .certificate {
-              width: 800px;
+              width: 100%;
+              max-width: 800px;
               margin: auto;
               background: white;
               border: 10px solid #facc15;
               border-radius: 12px;
-              padding: 60px;
+              padding: 40px 20px;
               box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             }
             .certificate h1 {
               color: #facc15;
-              font-size: 2rem;
+              font-size: 1.8rem;
             }
             .certificate h2 {
               color: #1d4ed8;
               text-decoration: underline;
+              font-size: 1.5rem;
             }
             .certificate p {
               color: #374151;
@@ -55,20 +57,20 @@ const Certificate = ({ name = "John Doe", score = 95 }) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-8">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4 md:p-8">
       <div
         ref={certRef}
-        className="w-[800px] bg-white border-[10px] border-yellow-500 rounded-xl shadow-xl px-12 py-16 text-center"
+        className="w-full max-w-[800px] bg-white border-[10px] border-yellow-500 rounded-xl shadow-xl px-4 py-8 md:px-12 md:py-16 text-center"
       >
-        <h1 className="text-4xl font-extrabold text-yellow-600 mb-6 tracking-wider">
+        <h1 className="text-3xl md:text-4xl font-extrabold text-yellow-600 mb-6 tracking-wider">
           🎓 Certificate of Completion
         </h1>
-        <p className="text-lg text-gray-600">This certifies that</p>
-        <h2 className="text-3xl font-bold text-blue-800 underline my-4">{name}</h2>
-        <p className="text-lg text-gray-600">has successfully completed the MCQ Knowledge Test</p>
-        <p className="text-2xl font-bold text-green-700 mt-6">Score: {score}/20</p>
+        <p className="text-base md:text-lg text-gray-600">This certifies that</p>
+        <h2 className="text-2xl md:text-3xl font-bold text-blue-800 underline my-4">{name}</h2>
+        <p className="text-base md:text-lg text-gray-600">has successfully completed the MCQ Knowledge Test</p>
+        <p className="text-xl md:text-2xl font-bold text-green-700 mt-6">Score: {score}/20</p>
 
-        <div className="mt-12 text-sm text-gray-500 flex justify-between">
+        <div className="mt-12 text-sm text-gray-500 flex flex-col md:flex-row justify-between gap-2">
           <p>Date: {new Date().toLocaleDateString()}</p>
           <p>MCQ Test Authority</p>
         </div>
